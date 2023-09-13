@@ -1,0 +1,10 @@
+{
+  "name": "ds-theme",
+  "version": "1.0.0",
+  "scripts": {
+    "watch": "sass scss:assets --no-source-map --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.66.1"
+  }
+}

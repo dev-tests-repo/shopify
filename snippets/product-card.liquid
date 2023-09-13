@@ -1,0 +1,42 @@
+{%- liquid
+  assign tags = product.tags | strip | split: ','
+  assign price = product.price | times: 100
+  assign cost_per_day = price | divided_by: 31.0
+
+  if product.image != blank
+    assign image_url = product.image | image_url: width: 540, height: 434
+  else
+    assign image_url = 'no-image.svg' | asset_url
+  endif
+-%}
+
+<div class="product-card">
+  <div class="product-card__wrapper" style="background: {{- product.background_color -}}">
+    <div class="product-card__inner">
+      <img
+        class="product-card__image"
+        src="{{- image_url -}}"
+        width="270"
+        height="217"
+        loading="lazy"
+        alt="{{- product.image.alt | escape | default: 'No image' -}}"
+      >
+      <p class="product-card__cost-per-day">
+        <span>{{- cost_per_day | ceil | money -}}</span>
+        <span>/day</span>
+      </p>
+
+      <div class="product-card__tags">
+        {%- for tag in tags limit: 2 -%}
+          <div class="product-card__tag">
+            {% render 'tag-icon', tag_name: tag %}
+            {{- tag -}}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+
+  <p class="product-card__title">{{- product.title -}}</p>
+  <p class="product-card__price">{{- price | money -}}</p>
+</div>

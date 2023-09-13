@@ -1,0 +1,115 @@
+{{ 'products-overview.css' | asset_url | stylesheet_tag }}
+{{ 'product-card.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'products-overview.js' | asset_url }}" defer="defer"></script>
+
+<div class="products-overview container">
+  {%- if section.settings.title != blank or section.settings.description != blank -%}
+    <div class="products-overview__header">
+      {%- if section.settings.title != blank -%}
+        <h2 class="products-overview__title">{{- section.settings.title -}}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.description != blank -%}
+        <p class="products-overview__description">{{- section.settings.description -}}</p>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  <div class="products-overview__content">
+    <div class="products-overview__slider swiper">
+      <div class="products-overview__grid swiper-wrapper">
+        {%- for block in section.blocks -%}
+          <div class="products-overview__slide swiper-slide">
+            {%- render 'product-card', product: block.settings -%}
+          </div>
+        {%- endfor -%}
+      </div>
+
+      <div class="products-overview__pagination"></div>
+    </div>
+  </div>
+
+  {%- if section.settings.button_url != blank and section.settings.button_title != blank -%}
+    <a class="products-overview__button" href="{{- section.settings.button_url -}}">
+      {{- section.settings.button_title -}}
+    </a>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Products overview",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "info": "(Optional)",
+      "default": "Have you had your daily dose of vit today?"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "info": "(Optional)",
+      "default": "Whether you need a daily pick-me up or a little sleep support, our products are developed with the end goal in mind. Optimally-dosed, highly bioavailable formulas means you can see and feel results that set you on a path to better health."
+    },
+    {
+      "type": "header",
+      "content": "Button",
+      "info": "(Optional)"
+    },
+    {
+      "type": "text",
+      "id": "button_title",
+      "label": "Title",
+      "default": "See All Products"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "tags",
+          "label": "Tags",
+          "info": "Enter comma-separated list of tags. Maximum number of tags: 2"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "number",
+          "id": "price",
+          "label": "Price"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color (Hover)"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

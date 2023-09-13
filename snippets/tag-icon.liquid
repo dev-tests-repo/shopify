@@ -1,0 +1,26 @@
+{%- liquid
+  assign tag = tag_name | strip | downcase
+
+  case tag
+    when 'brain'
+      render 'icon-brain'
+
+    when 'energy'
+      render 'icon-energy'
+
+    when 'heart'
+      render 'icon-heart'
+
+    when 'immunity'
+      render 'icon-immunity'
+
+    when 'mobility'
+      render 'icon-mobility'
+
+    when 'star'
+      render 'icon-star'
+
+    when 'stress'
+      render 'icon-stress'
+  endcase
+-%}

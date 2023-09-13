@@ -1,0 +1,117 @@
+{
+  "sections": {
+    "products-overview": {
+      "type": "products-overview",
+      "blocks": {
+        "4dafdb22-949f-4bf5-986c-04fda9ea862e": {
+          "type": "product",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Beyond_Gorgeous_F_3.png",
+            "tags": "immunity,stress",
+            "title": "Immunity",
+            "price": 10,
+            "background_color": "#fff9c0"
+          }
+        },
+        "1395993f-5b38-4fc2-9d7b-07cb230c1ff4": {
+          "type": "product",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Beyond_Gorgeous_Fy_1.png",
+            "tags": "mobility,stress",
+            "title": "Cloud Nine",
+            "price": 15.5,
+            "background_color": "#c0fcff"
+          }
+        },
+        "344ff212-3f89-42b6-a125-b710a52346df": {
+          "type": "product",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Beyond_Gorgeous_Fd_1.png",
+            "tags": "heart,energy",
+            "title": "Heart & Minds",
+            "price": 20,
+            "background_color": "#c0e0ff"
+          }
+        },
+        "a6815621-cd6a-472b-aab9-1f41d40f2f8b": {
+          "type": "product",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Beyond_Gorgeous_F2_1.png",
+            "tags": "brain,energy",
+            "title": "In the Zone",
+            "price": 25,
+            "background_color": "#c0ffc7"
+          }
+        }
+      },
+      "block_order": [
+        "4dafdb22-949f-4bf5-986c-04fda9ea862e",
+        "1395993f-5b38-4fc2-9d7b-07cb230c1ff4",
+        "344ff212-3f89-42b6-a125-b710a52346df",
+        "a6815621-cd6a-472b-aab9-1f41d40f2f8b"
+      ],
+      "settings": {
+        "title": "Have you had your daily dose of vit today?",
+        "description": "Whether you need a daily pick-me up or a little sleep support, our products are developed with the end goal in mind. Optimally-dosed, highly bioavailable formulas means you can see and feel results that set you on a path to better health.",
+        "button_title": "See All Products",
+        "button_url": ""
+      }
+    },
+    "reviews": {
+      "type": "reviews",
+      "blocks": {
+        "40772305-595e-4bda-8b93-cd4f18fc57b7": {
+          "type": "card",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/e1e40a4d31fa7b9f15f32f525faca4f0.jpg",
+            "rating": 5,
+            "heading": "Walking on Sunshine",
+            "text": "“These little softgels have helped boost my mood and keep me in a positive head space during all the chaos of everyone coming back to work since covid. I suffer from anxiety and depression and this has helped”",
+            "name": "Amber",
+            "product_image": "shopify:\/\/shop_images\/Beyond_Gorgeous_F_3.png",
+            "product_title": "Pocketful of Sunshine",
+            "product_url": ""
+          }
+        },
+        "a75f9d5b-7ed6-4188-b309-0ff1a39fb1df": {
+          "type": "card",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/03341cec7a88a4da3642fbec86a1e741.png",
+            "rating": 4,
+            "heading": "Complete one Eighty in the Mood Department",
+            "text": "“I’ve been one to get frustrated easily while dealing with stressful situations, either while working or with people. But I got annoyed with feeling this way, so I decided to look online and see what I could find. Came across these and ...”",
+            "name": "Aicia",
+            "product_image": "shopify:\/\/shop_images\/Beyond_Gorgeous_Fy_1.png",
+            "product_title": "Cloud Nine",
+            "product_url": ""
+          }
+        },
+        "4484f9d6-5537-4b43-a96b-984741cfbc08": {
+          "type": "card",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/beccfab4b80775ae070b75a6feadb093.jpg",
+            "rating": 5,
+            "heading": "Love this!!!",
+            "text": "“I love this vitamin, it is so tiny but packs a major punch! This has helped massively with my anxiety and has helped boost me up a little too!”",
+            "name": "Amber",
+            "product_image": "shopify:\/\/shop_images\/Beyond_Gorgeous_Fd_1.png",
+            "product_title": "Hearts & Minds",
+            "product_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "40772305-595e-4bda-8b93-cd4f18fc57b7",
+        "a75f9d5b-7ed6-4188-b309-0ff1a39fb1df",
+        "4484f9d6-5537-4b43-a96b-984741cfbc08"
+      ],
+      "settings": {
+        "title": "Why People Love Us"
+      }
+    }
+  },
+  "order": [
+    "products-overview",
+    "reviews"
+  ]
+}

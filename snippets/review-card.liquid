@@ -1,0 +1,60 @@
+{%- liquid
+  if review.photo != blank
+    assign photo_url = review.photo | image_url: width: 280, height: 280
+  else
+    assign photo_url = 'no-photo.svg' | asset_url
+  endif
+-%}
+
+<div class="review-card">
+  <div class="review-card__inner">
+    <div class="review-card__person">
+      <div class="review-card__content">
+        <img
+          class="review-card__photo"
+          src="{{- photo_url -}}"
+          width="140"
+          height="140"
+          loading="lazy"
+          alt="{{- review.photo.alt | escape | default: 'No photo' -}}"
+        >
+
+        <div class="review-card__rating">
+          {%- render 'rating', rating: review.rating -%}
+        </div>
+
+        <div class="review-card__details">
+          {%- if review.heading != blank -%}
+            <div class="review-card__heading">{{- review.heading -}}</div>
+          {%- endif -%}
+
+          {%- if review.text != blank -%}
+            <div class="review-card__text">{{- review.text -}}</div>
+          {%- endif -%}
+        </div>
+      </div>
+
+      {%- if review.name != blank -%}
+        <div class="review-card__name">{{- review.name -}}</div>
+      {%- endif -%}
+    </div>
+
+    <a class="review-card__product" href="{{- review.product_url -}}">
+      <div class="review-card__group">
+        {%- if review.product_image != blank -%}
+          <img
+            src="{{- review.product_image | image_url: width: 184, height: 140 -}}"
+            width="92"
+            height="70"
+            loading="lazy"
+            alt="{{- review.product_image.alt | escape -}}"
+          >
+        {%- endif -%}
+
+        <span>{{- review.product_title -}}</span>
+      </div>
+
+      {%- render 'icon-arrow-line' -%}
+    </a>
+  </div>
+</div>

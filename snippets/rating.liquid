@@ -1,0 +1,13 @@
+{%- liquid
+  for index in (0..4)
+    assign value = rating | minus: index
+
+    if value >= 1
+      assign is_empty = false
+    else
+      assign is_empty = true
+    endif
+
+    render 'icon-star', is_empty: is_empty
+  endfor
+-%}
